@@ -1,15 +1,17 @@
 import { useState } from 'react';
 import React from "react";
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../redux/actions';
 
 const AddTodo = () => {
-
+    const dispatch = useDispatch();
     const [text, setText] = useState("");
 
     const addItemToDo = (e) => {
         e.preventDefault()
 
-        // if (text)
-            // addItem(text)
+        if (text)
+        dispatch(addItem(text))
     }
     return (
         <header className="w-full px-6 py-6 bg-[#8c7d76]">
