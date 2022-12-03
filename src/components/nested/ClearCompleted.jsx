@@ -6,8 +6,8 @@ const ClearCompleted = () => {
     const dispatch = useDispatch();
 
     return (
-        <div className="">
-         <button onClick={()=>{dispatch(deleteCompleted())}} className="border border-gray-400 px-3 text-xs">Clear completed</button>
+        <div>
+            <button onClick={() => { dispatch(deleteCompleted()) }} className="border border-gray-400 px-3 text-xs">Clear completed</button>
         </div>
 
     );

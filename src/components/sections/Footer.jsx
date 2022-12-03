@@ -7,12 +7,8 @@ const Footer = () => {
     return (
         <footer className="flex px-3 border border-gray-300 items-center bg-gray-200 justify-between">
             <ItemLeft />
-
             <BTNsForAction />
-
-
-<ClearCompleted/>
-            
+            <ClearCompleted />
         </footer>
     );
 }

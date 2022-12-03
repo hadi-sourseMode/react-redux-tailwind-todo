@@ -31,18 +31,16 @@ const MyReducer = (state = initialState, action) => {
       };
 
     case CHANGE_FILTER:
-        return {
-          ...state,
-          isFilter: action.status
-        };
+      return {
+        ...state,
+        isFilter: action.status
+      };
 
     case DELETE_COMPLETED:
-          return {
-            ...state,
-            items: state.items.filter((item) => item.completed === false),
-          };
-
-        
+      return {
+        ...state,
+        items: state.items.filter((item) => item.completed === false),
+      };
 
     default:
       return state;

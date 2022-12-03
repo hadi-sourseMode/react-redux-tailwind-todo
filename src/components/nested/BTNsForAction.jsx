@@ -8,8 +8,8 @@ const BTNsForAction = () => {
 
     return (
         <div className="flex gap-3">
-            <button onClick={()=>{dispatch(changeFilter(false))}} className={ state.isFilter ? "bg-transparent focus:outline-none text-xs" : "bg-transparent focus:outline-none text-gray-900 text-sm font-bold"}>All</button>
-            <button onClick={()=>{dispatch(changeFilter(true))}} className={ !state.isFilter ? "bg-transparent focus:outline-none text-xs" : "bg-transparent focus:outline-none text-gray-900 text-sm font-bold"}>Active</button>
+            <button onClick={() => { dispatch(changeFilter(false)) }} className={state.isFilter ? "bg-transparent focus:outline-none text-xs" : "bg-transparent focus:outline-none text-gray-900 text-sm font-bold"}>All</button>
+            <button onClick={() => { dispatch(changeFilter(true)) }} className={!state.isFilter ? "bg-transparent focus:outline-none text-xs" : "bg-transparent focus:outline-none text-gray-900 text-sm font-bold"}>Active</button>
         </div>
 
     );
