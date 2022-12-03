@@ -1,6 +1,6 @@
-import { ADD_ITEM, DELETE_ITEM, GET_ITEMS } from "./actionTypes";
+import { ADD_ITEM, DELETE_ITEM, CHANGE_FILTER, TOGGLE_ITEM, DELETE_COMPLETED } from "./actionTypes";
 
-let nextID = 0;
+let nextID = 1;
 
 const addItem = (value) => {
     return {
@@ -11,12 +11,6 @@ const addItem = (value) => {
 };
 
 
-const getItems = () => {
-    return {
-        type: GET_ITEMS,
-    };
-};
-
 
 const deleteItem = (id) => {
     return {
@@ -25,4 +19,27 @@ const deleteItem = (id) => {
     };
 };
 
-export { addItem, deleteItem, getItems };
+
+const toggleItem = (id) => {
+    return {
+        type: TOGGLE_ITEM,
+        id: id
+    };
+};
+
+
+const changeFilter = (status) => {
+    return {
+        type: CHANGE_FILTER,
+        status: status
+    };
+};
+
+
+const deleteCompleted = () => {
+    return {
+        type: DELETE_COMPLETED,
+    };
+};
+
+export { addItem, deleteItem, changeFilter, toggleItem, deleteCompleted };

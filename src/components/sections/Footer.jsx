@@ -1,22 +1,17 @@
 import React from "react";
+import BTNsForAction from "../nested/BTNsForAction";
+import ClearCompleted from "../nested/ClearCompleted";
+import ItemLeft from "../nested/ItemLeft";
 
 const Footer = () => {
     return (
         <footer className="flex px-3 border border-gray-300 items-center bg-gray-200 justify-between">
-            <div className="flex gap-1 text-xs">
-                <span>0</span>
-                <span>item left</span>
-            </div>
+            <ItemLeft />
 
-            <div className="flex gap-3">
-                <button className="bg-transparent focus:outline-none text-xs">All</button>
-                <button className="bg-transparent focus:outline-none text-xs">Active</button>
-            </div>
+            <BTNsForAction />
 
-            <div className="">
-                <button className="border border-gray-400 px-3 text-xs">Clear completed</button>
-            </div>
 
+<ClearCompleted/>
             
         </footer>
     );
